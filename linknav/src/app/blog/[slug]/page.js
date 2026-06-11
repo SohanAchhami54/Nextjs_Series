@@ -1,8 +1,9 @@
 import React from 'react'
-
 const page =async ({params,searchParams}) => {   
     const {slug} =await params
-     const {query='laptop',page='2',sort='asc'}= await searchParams
+     const {query='Macbook',page='2',sort='asc'}= await searchParams
+
+     await new Promise((resolve)=>setTimeout(resolve,1500))
      
   return (
     <div>
