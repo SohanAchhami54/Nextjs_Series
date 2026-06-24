@@ -1,5 +1,4 @@
 'use client'
-import Counter from '@/components/Counter'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 
