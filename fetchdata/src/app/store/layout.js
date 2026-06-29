@@ -7,6 +7,7 @@ const layout = ({children}) => {
          <div className='flex flex-col gap-2'>
             <Link href='/store/dashboard'>Dashboard</Link>
             <Link href='/store/product'>Product</Link>
+            <Link href='/store/category'>Category</Link>
          </div>
           <main>
             {children}
