@@ -1,13 +1,11 @@
-"use client"
+import LikeButton from '@/components/LikeButton'
+import React from 'react'
 
-import React, { useState } from 'react'
-
-const page = () => {
-    const [count,setCount]=useState(0)
+const page = () => { 
+  const likes =20
   return (
     <div>
-      <p>{count} likes </p>
-      <button onClick={()=>setCount(prev=>prev+1)}>Click me !!</button>
+       <LikeButton initiallikes={likes}/>
     </div>
   )
 }
