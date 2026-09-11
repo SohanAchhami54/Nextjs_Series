@@ -2,7 +2,7 @@ import Product, { preload } from '@/components/product'
 import React from 'react'
 
 const checkStock = async(id)=>{
-  const res = await fetch( `https://dummyjson.com/products/${id}`)
+  const res = await fetch( `https://dummyjson.com/products/${id}`,{cache:'force-cache'})
   return res.json()
 } 
 
