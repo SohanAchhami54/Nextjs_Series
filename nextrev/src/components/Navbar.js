@@ -14,6 +14,7 @@ const Navbar = () => {
             <Link href={'/weblog'}>Weblog</Link>
             <Link href={'/microblog'}>Microblog</Link>
             <Link href={`/product/${productIds}`}>Product</Link>
+            <Link href={`/login`}>Login</Link>
          </div>
       </div>
     </div>
