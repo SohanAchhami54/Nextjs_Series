@@ -1,5 +1,8 @@
+import Blogposts from '@/components/Blogposts'
+import UserPreferences from '@/components/UserPreferences'
+import CurrentTime from '@/components/UserPreferences'
 import Link from 'next/link'
-import React from 'react'
+import React, { Suspense } from 'react'
 
 const page = () => { 
     const blogging=[
@@ -8,7 +11,7 @@ const page = () => {
         {id:3,name:'stockprice',price:12000},
     ]
   return (
-    <div>
+    <div className='flex flex-col gap-5'>
       <ul>
         {blogging.map((blog)=>(
             <li key={blog.id}>
@@ -17,6 +20,18 @@ const page = () => {
             </li>     
         ))}
       </ul>
+     
+      {/* Static content  */}
+      <h1>Our blog</h1>
+
+      {/* Cached dynamic content */}
+      <Blogposts/> 
+
+      {/* Runtime dynamic content */}
+      <Suspense fallback={<p>Loading your preferences...</p>}>
+         <UserPreferences/>
+      </Suspense>
+      
     </div>
   )
 }
