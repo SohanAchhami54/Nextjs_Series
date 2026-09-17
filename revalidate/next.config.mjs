@@ -1,5 +1,16 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig = { 
+  images:{
+   formats: ['image/avif', 'image/webp'], 
+    remotePatterns:[
+    {
+        protocol: 'https', 
+        hostname: 'i.pinimg.com',
+        port:'', 
+        pathname:'/**'
+    }
+  ]
+  },
   /* config options here */
    cacheComponents:true,
 };
