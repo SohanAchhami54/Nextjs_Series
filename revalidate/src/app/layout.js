@@ -1,6 +1,7 @@
 import { Geist, Roboto} from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { WebVitals } from "@/components/web-vitals";
 
 export const metadata = {
   title: "Create Next App",
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col bg-black text-white">
         <Navbar/>
+        <WebVitals/>
          <div className="flex mx-auto max-w-7xl">
           {children}
          </div>
