@@ -18,4 +18,8 @@ const page = () => {
   )
 }
 
+export const metadata={
+  title:'image',
+}
+
 export default page
