@@ -26,3 +26,10 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+//default routes.
+export const Metadata = {
+  title:{
+    default:'revalidate and metadata',
+  }
+}
