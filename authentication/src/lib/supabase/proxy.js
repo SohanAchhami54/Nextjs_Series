@@ -33,7 +33,7 @@ export async function updateSession(request) {
   const {data: { user } } = await supabase.auth.getUser();
 
   const path = request.nextUrl.pathname; 
-  console.log("path is:",path)
+
 
   // Not logged in -> block protected pages
   if (!user && PROTECTED_ROUTES.some((route) => path.startsWith(route))) {
