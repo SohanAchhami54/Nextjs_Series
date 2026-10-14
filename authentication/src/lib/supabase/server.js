@@ -28,3 +28,9 @@ export async function createClient() {
     }
   );
 }
+// 3. getAll(): Supabase wants to READ cookies
+
+// Whenever Supabase needs to know “is this user logged in?”, it calls getAll(). This is how it finds:
+
+// the secret note (code_verifier) during exchangeCodeForSession
+// the session on later requests, for example supabase.auth.getUser()
