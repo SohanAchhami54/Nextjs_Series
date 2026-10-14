@@ -17,7 +17,8 @@ export async function GET(request) {
     const supabase = await createClient(); //create supabase client. 
     // exchangeCodeForSession(code) sends the code and the code_verifier cookie to Supabase Auth.
     //if match then it returns the session containing access and refresh token and saved into cookie.
-    const { error } = await supabase.auth.exchangeCodeForSession(code);
+    const { error } = await supabase.auth.exchangeCodeForSession(code); 
+    //after this code run then only supabase calls getAll and setAll function.
 
     if (!error) { 
       const forwardedHost = request.headers.get("x-forwarded-host"); 
